@@ -50,7 +50,7 @@ export const SimpleForm = () => {
                 onChange={onInputChange}
             />
 
-            {username === 'PeakyCOL' && <Message />}
+            {username === 'Peaky2' && <Message />}
         </>
     );
 };
