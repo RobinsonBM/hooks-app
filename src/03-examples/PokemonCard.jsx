@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
+
 export const PokemonCard = ({ id, name, sprites = [] }) => {
-  console.log("🚀 ~ PokemonCard ~ sprites:", sprites);
+    
   return (
     <section style={{ height: 200 }}>
       <h2 className="text-capitalize">
@@ -13,4 +15,10 @@ export const PokemonCard = ({ id, name, sprites = [] }) => {
       </div>
     </section>
   );
+};
+
+PokemonCard.propTypes = {
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    sprites: PropTypes.array.isRequired,
 };

@@ -28,8 +28,6 @@ export const MultipleCustomHooks = () => {
         />
       )}
 
-      <h2>{data?.name}</h2>
-
       <button
         className="btn btn-dark mt-2"
         onClick={() => (counter > 1 ? decrement() : null)}
