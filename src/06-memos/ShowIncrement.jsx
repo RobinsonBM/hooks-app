@@ -8,7 +8,7 @@ export const ShowIncrement = memo(({ increment }) => {
     <button
       className='btn btn-dark'
       onClick={() => {
-        increment();
+        increment(5);
       }}
     >
       Incrementar
