@@ -29,6 +29,14 @@ export const TodoApp = () => {
     dispatch(action);
   };
 
+  const handlerDelete = (todoId) => {
+    const action = {
+      type: 'REMOVE_TODO',
+      payload: todoId,
+    };
+    dispatch(action);
+  };
+
   return (
     <>
       <h1>
@@ -38,7 +46,7 @@ export const TodoApp = () => {
 
       <div className='row'>
         <div className='col-7'>
-          <TodoList todos={todos} />
+          <TodoList todos={todos} onDeleteTodo={handlerDelete} />
         </div>
         <div className='col-5'>
           <h4>Agregar TODO</h4>
