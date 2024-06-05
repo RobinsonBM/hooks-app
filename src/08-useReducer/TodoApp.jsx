@@ -2,13 +2,7 @@ import { useEffect, useReducer } from 'react';
 import { todoReducer } from './todoReducer';
 import { TodoAdd, TodoList } from './components';
 
-const initialState = [
-  // {
-  //   id: new Date().getTime(),
-  //   description: 'Recolectar la piedra del alma',
-  //   done: false,
-  // },
-];
+const initialState = [];
 
 const init = () => {
   return JSON.parse(localStorage.getItem('todos')) || [];
@@ -37,6 +31,14 @@ export const TodoApp = () => {
     dispatch(action);
   };
 
+  const handleToggleTodo = (todoId) => {
+    const action = {
+      type: 'TOGGLE_TODO',
+      payload: todoId,
+    };
+    dispatch(action);
+  };
+
   return (
     <>
       <h1>
@@ -46,7 +48,11 @@ export const TodoApp = () => {
 
       <div className='row'>
         <div className='col-7'>
-          <TodoList todos={todos} onDeleteTodo={handlerDelete} />
+          <TodoList
+            todos={todos}
+            onDeleteTodo={handlerDelete}
+            onToggleTodo={handleToggleTodo}
+          />
         </div>
         <div className='col-5'>
           <h4>Agregar TODO</h4>
