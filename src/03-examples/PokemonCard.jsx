@@ -1,19 +1,19 @@
-import PropTypes from "prop-types";
-import { useLayoutEffect, useRef, useState } from "react";
+import PropTypes from 'prop-types';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 export const PokemonCard = ({ id, name, sprites = [] }) => {
   const imgRef = useRef();
-  const [pokename, setPokename] = useState("");
+  const [pokename, setPokename] = useState('');
 
   useLayoutEffect(() => {
-    const name = imgRef.current.getAttribute("alt");
+    const name = imgRef.current.getAttribute('alt');
     setPokename(name);
   }, [id]);
 
   return (
     <>
       <section style={{ height: 200 }}>
-        <h2 className="text-capitalize">
+        <h2 className='text-capitalize'>
           #{id} - {name}
         </h2>
         {/* imagenes */}
