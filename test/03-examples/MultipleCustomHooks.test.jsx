@@ -52,7 +52,6 @@ describe('Pruebas en MultipleCustomHooks', () => {
       hasError: null,
     });
     render(<MultipleCustomHooks />);
-    screen.debug();
     expect(screen.getByText('"Pikachu"')).toBeTruthy();
     expect(screen.getAllByRole('img')).toHaveLength(4);
   });
