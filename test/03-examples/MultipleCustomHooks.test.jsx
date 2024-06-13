@@ -35,7 +35,7 @@ describe('Pruebas en MultipleCustomHooks', () => {
   test('Debe de mostrar un pokemon y sus imagenes', () => {
     useFetch.mockReturnValue({
       data: {
-        id: '1',
+        id: 2,
         name: 'Pikachu',
         sprites: {
           front_default:
@@ -59,7 +59,7 @@ describe('Pruebas en MultipleCustomHooks', () => {
   test('Debe de llamar la funcion de incrementar', () => {
     useFetch.mockReturnValue({
       data: {
-        id: '1',
+        id: 2,
         name: 'Pikachu',
         sprites: {
           front_default:
@@ -86,7 +86,7 @@ describe('Pruebas en MultipleCustomHooks', () => {
   test('Debe de llamar la funcion de decrement', () => {
     useFetch.mockReturnValue({
       data: {
-        id: '2',
+        id: 2,
         name: 'Pikachu',
         sprites: {
           front_default:
